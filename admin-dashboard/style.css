@@ -1,0 +1,280 @@
+@font-face {
+  font-family: roboto;
+  src: url(Roboto-Regular.ttf);
+}
+
+* {
+  font-family: roboto;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+button {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100px;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.button:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.header,
+.main-content,
+.shortcuts,
+.admin-shortcuts {
+  display: grid;
+}
+
+.sidebar {
+  background-color: lightblue;
+  grid-row: span 2;
+}
+
+.main-content {
+  grid-template-columns: 2fr 1fr;
+}
+
+.projects,
+.news {
+  display: grid;
+  padding: 30px;
+  gap: 20px;
+}
+
+.projects {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1em 1fr 1fr;
+  background-color: #fecaca;
+}
+
+.news {
+  grid-template-rows: 1em 1fr 1em 1fr;
+  background-color: #fde68a;
+}
+
+.shortcuts,
+.admin-shortcuts,
+.dashboard {
+  text-align: left;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.shortcuts {
+  margin-top: 50px;
+}
+
+.admin-shortcuts {
+  margin-top: 100px;
+}
+
+.logo-icon {
+  height: 50px;
+  width: auto;
+  margin-left: 30px;
+}
+
+.sidebar-icon {
+  height: 2em;
+}
+
+.profile-icon {
+  width: 80px;
+  height: auto;
+}
+
+.greeting-pic {
+  margin-left: 90px;
+}
+
+.dashboard-banner,
+.shortcut,
+.admin-shortcut {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.dashboard-banner {
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+.shortcut,
+.admin-shortcut {
+  gap: 10px;
+}
+
+.dashboard {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 5px;
+}
+
+.header {
+  grid-template-rows: 1fr 1fr;
+  background-color: #94a3b8;
+}
+
+.header-top,
+.header-bot {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-top {
+  grid-template-columns: 100px 1fr 1fr;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.header-bot {
+  grid-template-columns: 160px 1fr 1fr;
+  gap: 30px;
+}
+
+.greeting,
+.big-name,
+.bold {
+  font-weight: 900;
+}
+
+.big-name {
+  font-size: 24px;
+}
+
+.color-block {
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(78,7,7,1) 45%, rgba(255,0,0,1) 80%);
+  width: 5px;
+  border-radius: 8px 0 0 8px;
+  grid-row: span 2;
+  margin: 0;
+  padding: 0;
+}
+
+.project,
+.announcements,
+.trending {
+  display: grid;
+  grid-template-columns: 1fr 12fr;
+  border-radius: 8px;
+  background-color: whitesmoke;
+}
+
+.project-btn {
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  gap: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.project-title {
+  grid-column: span 3;
+}
+
+.heading {
+  margin: 0px;
+  padding: 0px;
+}
+
+.project-text {
+  padding-top: 30px;
+  width: 80%;
+}
+
+.bot-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.header-top-left {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 20px;
+  margin-right: 100px;
+}
+
+.search {
+  margin-left: 50px;
+}
+
+input {
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 10px;
+}
+
+.ann-content,
+.trending-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-top: 30px;
+}
+
+.ann-content {
+  padding-top: 45px;
+}
+
+.line {
+  width: auto;
+  height: 1px;
+  background-color: grey;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+}
